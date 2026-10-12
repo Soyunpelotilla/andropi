@@ -8,6 +8,12 @@
 Write, run, preview and deploy code without a laptop.</p>
 
 <p align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.imtaqin.andropi"><b>Google Play</b></a> ·
+  <a href="https://github.com/imtaqin/andropi/releases/latest"><b>APK downloads</b></a> ·
+  <a href="https://andropi.imtaqin.id"><b>Website</b></a>
+</p>
+
+<p align="center">
   <img src="store/en/screenshots-panorama.png" alt="AndroPI screenshots">
 </p>
 

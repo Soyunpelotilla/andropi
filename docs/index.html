@@ -72,6 +72,7 @@ a { color: inherit; }
 .lede { margin: 28px 0 0; max-width: 34ch; font-size: clamp(18px, 1.6vw, 21px); color: var(--muted); }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
 .meta { margin-top: 26px; font: 400 13px/1.6 var(--mono); color: var(--faint); }
+.meta a, .head p a { color: var(--ink); text-underline-offset: 3px; }
 .meta b { color: var(--muted); font-weight: 400; }
 
 .stage { position: relative; justify-self: center; width: min(360px, 82vw); }
@@ -192,7 +193,7 @@ footer a { color: var(--muted); }
       <a href="#features">Features</a>
       <a href="#download">Download</a>
       <a href="https://github.com/imtaqin/andropi">GitHub</a>
-      <a class="btn small" href="#download">Get the app</a>
+      <a class="btn small" href="https://play.google.com/store/apps/details?id=com.imtaqin.andropi">Get the app</a>
     </nav>
   </div>
 </header>
@@ -212,16 +213,16 @@ footer a { color: var(--muted); }
         </h1>
         <p class="lede">AndroPI is an AI coding agent that lives on Android. Describe what you want. It writes the code, runs it in a real Linux, shows you a live preview and deploys it.</p>
         <div class="cta">
-          <a class="btn big light" href="#download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
-            Download for Android
+          <a class="btn big light" href="https://play.google.com/store/apps/details?id=com.imtaqin.andropi">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17a1 1 0 0 0 1.5.86l14.2-8.5a1 1 0 0 0 0-1.72L6.5 2.64A1 1 0 0 0 5 3.5Z"/></svg>
+            Get it on Google Play
           </a>
-          <a class="btn big dark" href="https://github.com/imtaqin/andropi">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
-            Star on GitHub
+          <a class="btn big dark" href="#download">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Download APK
           </a>
         </div>
-        <p class="meta"><b>MIT licensed</b> · no servers, no trackers · arm64, armv7, x86_64</p>
+        <p class="meta"><b>MIT licensed</b> · <a href="https://github.com/imtaqin/andropi">source on GitHub</a> · no servers, no trackers</p>
       </div>
 
       <div class="stage" id="stage">
@@ -354,8 +355,8 @@ footer a { color: var(--muted); }
     <div class="wrap">
       <div class="head">
         <span class="eyebrow">Download · v0.1.2</span>
-        <h2>Pick your phone's chip</h2>
-        <p>Not sure? Almost every phone from the last six years is arm64.</p>
+        <h2>Two ways to install</h2>
+        <p>The easy way is <a href="https://play.google.com/store/apps/details?id=com.imtaqin.andropi">Google Play</a>: it picks the right build and keeps it updated. Or download an APK below. The APK builds can also open project folders anywhere on your phone.</p>
       </div>
       <div class="dl">
         <a class="arch main reveal" href="https://github.com/imtaqin/andropi/releases/download/v0.1.2/AndroPI-v0.1.2-arm64-v8a.apk">
@@ -377,7 +378,7 @@ footer a { color: var(--muted); }
           <span class="size"><b>APK</b><b>63 MB</b></span>
         </a>
       </div>
-      <p class="note">Check with <code>uname -m</code> in any terminal app: <code>aarch64</code>, <code>armv7l</code> or <code>x86_64</code>. Every build is on the <a href="https://github.com/imtaqin/andropi/releases">releases page</a>.</p>
+      <p class="note">Not sure which APK? Almost every phone from the last six years is arm64. Check with <code>uname -m</code> in any terminal app: <code>aarch64</code>, <code>armv7l</code> or <code>x86_64</code>. Every build is on the <a href="https://github.com/imtaqin/andropi/releases">releases page</a>.</p>
     </div>
   </section>
 
