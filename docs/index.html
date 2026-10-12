@@ -65,7 +65,7 @@ a { color: inherit; }
 
 /* Hero */
 .hero { position: relative; padding-block: clamp(40px, 7vw, 90px) 0; }
-.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; padding-bottom: 150px; z-index: 1; }
 .hero h1 { margin: 22px 0 0; font-weight: 600; font-size: clamp(52px, 8.6vw, 116px); line-height: .95; letter-spacing: -.055em; }
 .hero h1 .line { display: block; overflow: hidden; padding-bottom: .06em; }
 .hero h1 .line > span { display: inline-block; }
@@ -84,17 +84,17 @@ a { color: inherit; }
 .blob.b1 { width: 150px; height: 150px; background: var(--sun); right: -20%; top: -4%; }
 .blob.b2 { width: 110px; height: 110px; background: var(--mint); left: -18%; bottom: 36%; border-radius: 28px; transform: rotate(14deg); }
 
-.ribbon { position: absolute; left: 0; top: 50%; width: 100%; height: 420px; pointer-events: none; z-index: 0; }
+.ribbon { position: absolute; left: 0; bottom: 70px; width: 100%; height: 360px; pointer-events: none; z-index: 0; }
 .ribbon path { fill: none; stroke-linecap: round; }
 
 /* Model marquee */
-.marquee { border-block: 1px solid var(--line); overflow: hidden; padding-block: 22px; margin-top: clamp(50px, 8vw, 100px); position: relative; z-index: 2; background: var(--bg); }
+.marquee { border-block: 1px solid var(--line); overflow: hidden; padding-block: 22px; margin-top: 0; position: relative; z-index: 2; background: var(--bg); }
 .marquee .track { display: flex; width: max-content; font: 400 15px/1 var(--mono); color: var(--muted); }
 .marquee .track span { display: inline-flex; align-items: center; gap: 28px; padding-right: 28px; }
 .marquee .track span::after { content: "✦"; color: var(--violet); }
 
 /* Sections */
-section.block { padding-block: clamp(80px, 11vw, 140px); position: relative; }
+section.block { padding-block: clamp(80px, 11vw, 140px); position: relative; scroll-margin-top: 40px; }
 .head { max-width: 780px; }
 .head h2 { margin: 16px 0 0; font-weight: 600; font-size: clamp(38px, 5.4vw, 72px); line-height: 1; letter-spacing: -.045em; text-wrap: balance; }
 .head p { margin: 20px 0 0; color: var(--muted); font-size: 19px; max-width: 52ch; }
