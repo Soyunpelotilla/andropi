@@ -42,7 +42,13 @@ const dropFile = (name) =>
 function prune(dir) {
 	for (const name of readdirSync(dir)) {
 		const path = join(dir, name);
-		if (statSync(path).isDirectory()) {
+		let stat;
+		try {
+			stat = statSync(path);
+		} catch {
+			continue;
+		}
+		if (stat.isDirectory()) {
 			if (dropDirs.has(name)) rmSync(path, { recursive: true, force: true });
 			else prune(path);
 		} else if (dropFile(name)) {
@@ -64,7 +70,13 @@ let after = 0;
 function minify(dir) {
 	for (const name of readdirSync(dir)) {
 		const path = join(dir, name);
-		if (statSync(path).isDirectory()) {
+		let stat;
+		try {
+			stat = statSync(path);
+		} catch {
+			continue;
+		}
+		if (stat.isDirectory()) {
 			minify(path);
 			continue;
 		}
