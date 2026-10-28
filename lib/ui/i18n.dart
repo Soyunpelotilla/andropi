@@ -1,8 +1,14 @@
 import 'theme.dart';
 
-/// Translates an English UI string into the chosen language. English text is the key, so a
-/// missing translation falls back to English instead of showing a placeholder.
-String tr(String en) => Appearance.instance.language == 'id' ? (_id[en] ?? en) : en;
+String tr(String en) {
+  if (Appearance.instance.language == 'id') {
+    return _id[en] ?? en;
+  }
+  if (Appearance.instance.language == 'es') {
+    return en; // Español: por ahora muestra inglés (añade traducciones después)
+  }
+  return en; // Default: inglés
+}
 
 const languages = {'es': 'Español', 'en': 'English'};
 
