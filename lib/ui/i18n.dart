@@ -4,7 +4,7 @@ import 'theme.dart';
 /// missing translation falls back to English instead of showing a placeholder.
 String tr(String en) => Appearance.instance.language == 'id' ? (_id[en] ?? en) : en;
 
-const languages = {'en': 'English', 'id': 'Bahasa Indonesia'};
+const languages = {'es': 'Español', 'en': 'English'};
 
 const _id = <String, String>{
   // Home and navigation
