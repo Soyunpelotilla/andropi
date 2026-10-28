@@ -9,11 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - uses: hecrj/setup-flutter@v2
+      - uses: actions/setup-flutter@v3
         with:
           flutter-version: "3.16.0"
           channel: "stable"
-      
+
       - run: flutter pub get
       
       - run: flutter build apk --release
