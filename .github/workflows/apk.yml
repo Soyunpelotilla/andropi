@@ -7,13 +7,50 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
-      - uses: brandontony/flutter-actions/setup@v1
-        with:
-          flutter-version: "3.16.0"
-          channel: "stable"
+      - uses: actions/checkout@v4
 
-      - run: flutter pub get
-      
-      - run: flutter build apk --release
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install lief
+        run: pip install lief
+
+      - name: Bundle runtime
+        run: python tool/bundle_runtime.py
+
+      - name: Build agent
+        run: |
+          cd agent
+          npm install
+          node build.mjs
+
+      - name: Flutter pub get
+        run: flutter pub get
+
+      - name: Build APK
+        run: |
+          flutter build apk --flavor full --release \
+            --target-platform android-arm64
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: andropi-apk
+          path: build/app/outputs/flutter-apk/*.apk
