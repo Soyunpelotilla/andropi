@@ -17,21 +17,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
+      - name: Setup Flutter  <-- ¡Cambiado a acción fiable!
+        uses: hecrj/setup-flutter@v2
         with:
+          flutter-version: "3.16.0"  <-- Dart 3.16.0 (compatible con ^3.13.4)
           channel: "stable"
-          flutter-version: "3.22.0"  # Forzar versión con Dart compatible
-
-      - name: Verify Dart version
-        run: dart --version
 
       - name: Install dependencies
         run: flutter pub get
 
       - name: Build APK Release
         run: flutter build apk --release
-        # El APK quedará en: build/app/outputs/flutter-apk/app-release.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
